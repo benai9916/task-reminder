@@ -2,7 +2,8 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true;
 
-const API = axios.create({ baseURL: 'https://reemind-webapp.herokuapp.com/'})
+const API = axios.create({ baseURL: 'https://reemind-backend.herokuapp.com/'})
+
 
 // const API = axios.create({ baseURL: 'http://localhost:5000/'})
 

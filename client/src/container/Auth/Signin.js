@@ -7,12 +7,12 @@ import { Typography, Container, Paper, Grid, Button } from "@material-ui/core";
 import Input from "../../components/input";
 import { signin } from "../../redux/actions/authAction";
 
-const initialState = { email: "", password: " " };
+const initialStat = { email: "", password: " " };
 
 const Signin = () => {
   const classes = useStyles();
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(initialStat);
   const dispatch = useDispatch();
 
   const handleShowPassword = () =>

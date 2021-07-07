@@ -41,14 +41,16 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+      
         <Switch>
           <Route exact path={["/signin", "/"]} component={Signin} />
           <Route exact path="/signup" component={Signup} />
 
           <PrivateRoute exact path="/taskreminder" component={TaskReminder} />
         </Switch>
+       
       </BrowserRouter>
-    </>
+      </>
   );
 };
 

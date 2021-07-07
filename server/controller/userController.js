@@ -34,7 +34,8 @@ export const signup = async (req, res) => {
         const token = jwt.sign({ user: savedUser._id}, process.env.SECRET_KEY, {expiresIn: "1d"});
 
         // send the toek in http-only cookie 
-        res.cookie("token", token, {httpOnly: true }).send();
+        res.cookie("token", token, {httpOnly: true, secure: true,
+            sameSite: "none" }).send();
 
     } catch (err) {
         console.log(err);
@@ -71,7 +72,8 @@ export const signin = async (req, res) => {
         const token = jwt.sign({ user: existingUser._id}, process.env.SECRET_KEY, {expiresIn: "1d"} );
 
         // send the toek in http-only cookie 
-        res.cookie("token", token, {httpOnly: true }).send();
+        res.cookie("token", token, {httpOnly: true, secure: true,
+            sameSite: "none"}).send();
 
     } catch(err) {
         console.log(err);

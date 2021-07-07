@@ -14,13 +14,11 @@ import reducers from './redux/reducers';
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
-  <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <App />
       </Provider> 
-    </ThemeProvider>
-  </React.StrictMode>,
+    </ThemeProvider>,
   document.getElementById('root')
 );
 

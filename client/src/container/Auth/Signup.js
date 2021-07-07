@@ -8,7 +8,7 @@ import Input from "../../components/input";
 
 import { signup } from "../../redux/actions/authAction";
 
-const initialState = {
+const initialStat = {
   name: "",
   email: "",
   password: " ",
@@ -18,7 +18,7 @@ const initialState = {
 const Signup = () => {
   const classes = useStyles();
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(initialStat);
   const dispatch = useDispatch();
 
   const handleShowPassword = () =>
